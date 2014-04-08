@@ -6,11 +6,16 @@
 
 ## 【p1】使用gitlab发布接口
 
-在kissy组下面新建一个gallery仓库，设置为允许覆盖发布，发布目录使用当前根目录，不使用build目录。
+### 新增组件
 
-kpm触发发布接口时，将组件的build目录下的文件，复制到gallery仓库（gitlab）的组件目录中；
+调用gitlab接口，在kissy group下创建一个组件库，并推送master代码
 
-使用shell模块，触发代码提交，最后触发部署命令。
+### 发布组件
+
+调用gitlab接口，找到kissy group下的该组件库，push发布。
+
+* kissy组：[http://gitlab.alibaba-inc.com/groups/kissy](http://gitlab.alibaba-inc.com/groups/kissy)
+* gitlab接口人：丽霞
 
 提交的git日志为：
 
@@ -20,6 +25,15 @@ publish XX组件
 
 * daily如何处理？
 * gitlab的接口是否符合要求？
+
+** 废弃方案，仅供参考：**
+
+在kissy组下面新建一个gallery仓库，设置为允许覆盖发布，发布目录使用当前根目录，不使用build目录。
+
+kpm触发发布接口时，将组件的build目录下的文件，复制到gallery仓库（gitlab）的组件目录中；
+
+使用shell模块，触发代码提交，最后触发部署命令。
+
 
 ## 【p1】从a.tbcdn.cn切换成g.tbcdn.cn
 
