@@ -1,8 +1,12 @@
 {
   "name": "magic-power",
   "version": "0.0.1",
-  "dependencies": {},
-  "devDependencies": {
-
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "jade": "*"
   }
 }
